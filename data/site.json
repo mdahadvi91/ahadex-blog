@@ -1,0 +1,31 @@
+{
+  "name": "Ahadex",
+  "tagline": "Modern Technology, AI Benchmarks & Engineering Intelligence",
+  "url": "https://ahadex.online",
+  "description": "Ahadex is an independent digital tech publication founded by Mohammad Ahad, delivering rigorous AI benchmarks, web development guides, and software analysis.",
+  "language": "en-US",
+  "publisherId": "pub-9283746152048173",
+  "contact": {
+    "email": "mdahadvi91@gmail.com",
+    "whatsapp": "+971507975837",
+    "whatsappUrl": "https://wa.me/971507975837"
+  },
+  "logo": "/assets/images/ahadex-logo.svg",
+  "social": {
+    "twitter": "https://twitter.com/AhadexOnline",
+    "github": "https://github.com/ahadex",
+    "linkedin": "https://linkedin.com/company/ahadex",
+    "whatsapp": "https://wa.me/971507975837",
+    "rss": "https://ahadex.online/sitemap-posts.xml"
+  },
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "AI Tools", "url": "/categories/ai-tools.html" },
+    { "label": "Web Dev", "url": "/categories/web-development.html" },
+    { "label": "Productivity", "url": "/categories/productivity.html" },
+    { "label": "Cybersecurity", "url": "/categories/cybersecurity.html" },
+    { "label": "All Posts", "url": "/posts/index.html" },
+    { "label": "About", "url": "/about.html" },
+    { "label": "Contact", "url": "/contact.html" }
+  ]
+}

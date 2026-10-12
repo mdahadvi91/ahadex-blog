@@ -1,0 +1,33 @@
+<!-- Reusable Newsletter Component -->
+<section class="newsletter-card" aria-labelledby="newsletterTitle">
+  <div class="newsletter-inner">
+    <div class="newsletter-content">
+      <span class="newsletter-badge">Weekly Technical Intelligence</span>
+      <h3 class="newsletter-title" id="newsletterTitle">Stay Ahead of Silicon & AI Shifts</h3>
+      <p class="newsletter-desc">
+        Join 45,000+ engineers, founders, and technical leaders receiving our zero-fluff weekly teardown of frontier AI benchmarks, architecture breakdowns, and tool audits.
+      </p>
+    </div>
+
+    <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); window.handleNewsletterSubmit && window.handleNewsletterSubmit(this);">
+      <div class="newsletter-input-group">
+        <input 
+          type="email" 
+          name="email" 
+          class="newsletter-email-input" 
+          placeholder="Enter your work email address..." 
+          required 
+          autocomplete="email"
+          aria-label="Email address for technical newsletter"
+        />
+        <button type="submit" class="newsletter-submit-btn">Subscribe Free</button>
+      </div>
+      <p class="newsletter-disclaimer">
+        No spam, ever. Unsubscribe with 1-click anytime. Reviewed under our <a href="/privacy.html">Privacy Policy</a>.
+      </p>
+      <div class="newsletter-success-msg" id="newsletterSuccess" style="display:none;" role="status">
+        &check; Thank you! Confirmation sent. Welcome to TechJournal weekly dispatch.
+      </div>
+    </form>
+  </div>
+</section>

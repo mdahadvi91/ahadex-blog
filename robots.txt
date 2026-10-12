@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /search/
+Disallow: /components/
+Disallow: /data/
+
+# Sitemaps for Ahadex.online
+Sitemap: https://ahadex.online/sitemap.xml
+Sitemap: https://ahadex.online/sitemap-posts.xml
+Sitemap: https://ahadex.online/sitemap-pages.xml
+Sitemap: https://ahadex.online/sitemap-images.xml

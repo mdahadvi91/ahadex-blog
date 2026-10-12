@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ahadex.online/posts/chatgpt-secret-codes.html</loc>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/chatgpt-secret-codes/hero-1280.jpg</image:loc>
+      <image:title>ChatGPT Secret Codes and Prompt Engineering Terminal Setup</image:title>
+      <image:caption>Dual-terminal testing rig at Ahadex Systems Lab running prompt operator ablation studies</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/chatgpt-secret-codes/reasoning-logic.jpg</image:loc>
+      <image:title>ChatGPT Cognitive Reasoning Logic Visualization</image:title>
+      <image:caption>Chain-of-thought logic pathways and deep inference prompt architectures</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/chatgpt-secret-codes/prompt-lab.jpg</image:loc>
+      <image:title>Mohammad Ahad Testing ChatGPT Secret Codes</image:title>
+      <image:caption>Benchmarking prompt token overhead and output entropy in systems lab</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ahadex.online/posts/top-10-free-ai-tools-2026.html</loc>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/hero-1280.avif</image:loc>
+      <image:title>Top 10 Free AI Tools in 2026 Workspace Setup</image:title>
+      <image:caption>Multi-monitor workstation benchmarking setup at Ahadex Systems Lab</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-01-chatgpt.avif</image:loc>
+      <image:title>ChatGPT 2026 Dashboard Interface</image:title>
+      <image:caption>ChatGPT web search and real-time reasoning interface</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-02-claude.avif</image:loc>
+      <image:title>Claude 3.5 Sonnet Artifacts Workspace</image:title>
+      <image:caption>Claude split-screen Artifacts view rendering live interactive components</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-03-google-aistudio.avif</image:loc>
+      <image:title>Google AI Studio Prompt Engineering Console</image:title>
+      <image:caption>Google AI Studio multimodal prompt interface with 1M token context</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-04-deepseek.avif</image:loc>
+      <image:title>DeepSeek R1 Reasoning Interface</image:title>
+      <image:caption>DeepSeek-R1 chain of thought step-by-step logic breakdown</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-05-ollama.avif</image:loc>
+      <image:title>Ollama 2.0 Local Terminal Inference</image:title>
+      <image:caption>Ollama CLI running private offline LLMs with hardware acceleration</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-06-cursor.avif</image:loc>
+      <image:title>Cursor AI Code Editor Interface</image:title>
+      <image:caption>Cursor editor inline autocomplete and multi-file debugging assistant</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-07-leonardo-ai.avif</image:loc>
+      <image:title>Leonardo AI Art Generation Canvas</image:title>
+      <image:caption>Leonardo AI dashboard with 3D digital art generation and style controls</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-08-perplexity.avif</image:loc>
+      <image:title>Perplexity AI Citation Grounded Search</image:title>
+      <image:caption>Perplexity AI research engine showing numbered source citations</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-09-elevenlabs.avif</image:loc>
+      <image:title>ElevenLabs Speech Synthesis Studio</image:title>
+      <image:caption>ElevenLabs text-to-speech studio dashboard with waveform timeline</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/posts/top-10-free-ai-tools-2026/tool-10-v0-vercel.avif</image:loc>
+      <image:title>v0 by Vercel Generative UI Dashboard</image:title>
+      <image:caption>v0 natural language frontend UI and React component generator</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ahadex.online/</loc>
+    <image:image>
+      <image:loc>https://ahadex.online/assets/images/ahadex-logo.svg</image:loc>
+      <image:title>Ahadex Official Brand Emblem</image:title>
+      <image:caption>Ahadex Technology &amp; AI Intelligence official logo</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "mohammad-ahad",
+    "name": "Mohammad Ahad",
+    "slug": "author-name",
+    "role": "Founder, Chief Technology Editor & Systems Architect",
+    "url": "/authors/author-name.html",
+    "bio": "Mohammad Ahad is the founder and chief editor of Ahadex. He leads research in artificial intelligence workloads, software systems performance, and cloud architectures.",
+    "avatar": "/assets/images/ahadex-logo.svg",
+    "credentials": "Lead Architect & Founder of Ahadex (ahadex.online)",
+    "email": "mdahadvi91@gmail.com",
+    "whatsapp": "+971507975837",
+    "whatsappUrl": "https://wa.me/971507975837",
+    "social": {
+      "whatsapp": "https://wa.me/971507975837",
+      "email": "mailto:mdahadvi91@gmail.com",
+      "twitter": "https://twitter.com/AhadexOnline",
+      "github": "https://github.com/ahadex",
+      "linkedin": "https://linkedin.com/in/mohammad-ahad"
+    },
+    "articlesCount": 42
+  }
+]

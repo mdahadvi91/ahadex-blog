@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Ahadex Blog &mdash; In-Depth Tech Investigations, Systems Engineering &amp; Web Performance</title>
+  <meta name="description" content="Ahadex Blog: Engineering-grade investigations into operating systems, SSD forensics, web latency, browser internals, digital privacy, and AI tools by Mohammad Ahad." />
+  <link rel="canonical" href="https://ahadex.online/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ahadex.online/" />
+  <meta property="og:title" content="Ahadex Blog &mdash; In-Depth Tech Investigations, Systems Engineering &amp; Web Performance" />
+  <meta property="og:description" content="Ahadex Blog: Engineering-grade investigations into operating systems, SSD forensics, web latency, browser internals, digital privacy, and AI tools." />
+  <meta property="og:image" content="https://ahadex.online/assets/images/ahadex-logo.svg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ahadex Blog &mdash; In-Depth Tech Investigations, Systems Engineering &amp; Web Performance" />
+  <meta name="twitter:description" content="Ahadex Blog: Engineering-grade investigations into operating systems, SSD forensics, web latency, browser internals, and AI tools." />
+  <meta name="twitter:image" content="https://ahadex.online/assets/images/ahadex-logo.svg" />
+
+  <!-- PWA & Favicon -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Preload Critical CSS -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/category.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/search.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+
+  <!-- Preload Critical Hero Image -->
+  <link rel="preload" as="image" href="/assets/images/posts/what-happens-when-you-delete-a-file/hero-1280.svg" />
+
+  <!-- Schema.org JSON-LD Structured Data for Google AdSense & SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://ahadex.online/#website",
+        "url": "https://ahadex.online/",
+        "name": "Ahadex Blog",
+        "description": "Engineering-grade tech investigations, systems architecture, web performance, digital privacy, and AI analysis.",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://ahadex.online/#organization",
+          "name": "Ahadex Blog",
+          "url": "https://ahadex.online/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ahadex.online/assets/images/ahadex-logo.svg",
+            "width": 512,
+            "height": 512
+          }
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://ahadex.online/#organization",
+        "name": "Ahadex Blog",
+        "url": "https://ahadex.online/",
+        "founder": {
+          "@type": "Person",
+          "name": "Mohammad Ahad",
+          "jobTitle": "Systems Engineer & Technology Journalist",
+          "email": "mdahadvi91@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header Component Container -->
+  <div data-component="header">
+    <header class="site-header">
+      <div class="header-inner container">
+        <div class="header-left">
+          <a href="/" class="brand-logo" aria-label="Ahadex Blog Home">
+            <img src="/assets/images/ahadex-logo.svg" alt="Ahadex Blog Logo" class="brand-logo-img" width="36" height="36" />
+            <span class="logo-mark">Ahad</span><span class="logo-accent">ex Blog</span>
+          </a>
+        </div>
+        <nav class="desktop-nav">
+          <ul class="nav-list">
+            <li><a href="/" class="nav-link active">Home</a></li>
+            <li><a href="/categories/ai-tools.html" class="nav-link">AI Tools</a></li>
+            <li><a href="/categories/web-development.html" class="nav-link">Web Dev</a></li>
+            <li><a href="/categories/cybersecurity.html" class="nav-link">Cybersecurity</a></li>
+            <li><a href="/categories/technology.html" class="nav-link">Technology</a></li>
+            <li><a href="/posts/index.html" class="nav-link">All 12 Posts</a></li>
+            <li><a href="/authors/author-name.html" class="nav-link">Mohammad Ahad</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <!-- Search Modal Component Placeholder -->
+  <div data-component="search"></div>
+
+  <!-- Main Container -->
+  <main class="container" style="padding-top: 1.25rem;">
+    <!-- Top Tech Pulse Breaking Ticker (Uncommon Editorial Feature) -->
+    <div class="tech-pulse-ticker" aria-label="Live Tech Pulse">
+      <span class="pulse-dot"></span>
+      <span class="pulse-label">TECH PULSE</span>
+      <div class="pulse-content">
+        <span>LATEST LAB RESEARCH: </span>
+        <a href="/posts/what-happens-when-you-delete-a-file.html">Inodes &amp; SSD TRIM Physics</a> &middot;
+        <a href="/posts/why-some-websites-feel-instant.html">Sub-100ms Web Latency Waterfall</a> &middot;
+        <a href="/posts/chatgpt-secret-codes.html">25 Master AI Prompt Codes</a> &middot;
+        <a href="/posts/why-same-wifi-speed-can-feel-different.html">Bufferbloat &amp; Wi-Fi 7 Physics</a>
+      </div>
+    </div>
+
+    <!-- Top Ad Placement (Leaderboard: 728x90) with Zero-CLS reservation -->
+    <div class="ad-slot-wrapper ad-leaderboard" aria-label="Advertisement Banner">
+      <span class="ad-label">Advertisement</span>
+    </div>
+
+    <!-- 1. Editorial Hero Showcase -->
+    <section class="home-hero-banner" aria-labelledby="heroTitle" style="margin-top: 1.5rem; background: radial-gradient(circle at top right, rgba(2, 132, 199, 0.08), transparent 70%), var(--bg-secondary); border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: 2.25rem 2rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.85rem;">
+        <span class="home-hero-kicker" style="margin: 0; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 9999px; background: var(--brand-primary);"></span>
+          Ahadex Research Labs &middot; Founded by Mohammad Ahad
+        </span>
+        <span style="font-family: var(--font-mono, monospace); font-size: 0.75rem; color: #10b981; font-weight: 700; background: rgba(16, 185, 129, 0.1); padding: 0.2rem 0.6rem; border-radius: 4px;">
+          ✓ ALL 12 MASTER GUIDES LIVE
+        </span>
+      </div>
+      
+      <h1 class="home-hero-title" id="heroTitle" style="font-size: 2.35rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1.25; margin-bottom: 1rem; color: var(--text-primary);">
+        Systems Engineering, Web Latency &amp; Digital Privacy Truths
+      </h1>
+      
+      <p class="home-hero-desc" style="font-size: 1.05rem; line-height: 1.65; color: var(--text-secondary); max-width: 860px; margin-bottom: 1.5rem;">
+        Uncompromising, empirical technical investigations with zero fluff. Every guide breaks down hardware physics, kernel syscalls, and network protocol packets &mdash; backed by insights from 72 verified industry authorities.
+      </p>
+
+      <!-- Trust Metrics Strip -->
+      <div class="hero-stats-strip">
+        <div class="hero-stat-badge">
+          <strong>12</strong> Master Deep-Dives
+        </div>
+        <div class="hero-stat-badge">
+          <strong>72</strong> Verified Authorities
+        </div>
+        <div class="hero-stat-badge">
+          <strong>100%</strong> Human-Written &amp; Tested
+        </div>
+        <div class="hero-stat-badge">
+          <strong>0%</strong> AI Fluff / Sponsored Bias
+        </div>
+        <div class="hero-stat-badge">
+          <strong>180+</strong> Diagrams &amp; Photos
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Category Filter Bar (Instant Filtering) -->
+    <div style="margin-top: 2.5rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
+        <h2 style="font-size: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-primary);">
+          Explore All 12 Investigations
+        </h2>
+        <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono, monospace);">Filter by Engineering Domain:</span>
+      </div>
+
+      <nav class="filter-tab-bar" aria-label="Category Filters" id="categoryFilterBar">
+        <button class="filter-pill active" data-filter="all" onclick="filterArticles('all', this)">
+          All Investigations <span class="pill-count">(12)</span>
+        </button>
+        <button class="filter-pill" data-filter="systems" onclick="filterArticles('systems', this)">
+          Systems &amp; Storage <span class="pill-count">(3)</span>
+        </button>
+        <button class="filter-pill" data-filter="web-perf" onclick="filterArticles('web-perf', this)">
+          Web Performance &amp; Network <span class="pill-count">(4)</span>
+        </button>
+        <button class="filter-pill" data-filter="privacy" onclick="filterArticles('privacy', this)">
+          Privacy &amp; Forensics <span class="pill-count">(3)</span>
+        </button>
+        <button class="filter-pill" data-filter="ai-tools" onclick="filterArticles('ai-tools', this)">
+          AI Architecture &amp; Prompts <span class="pill-count">(2)</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- 3. Two-Column Layout: Main Content (Left) + Sidebar (Right) -->
+    <div class="home-layout-grid" style="margin-top: 1rem;">
+      <!-- Left Column: Master 12-Article Grid -->
+      <div class="home-main-content">
+        
+        <!-- Master Grid Displaying ALL 12 POSTS -->
+        <div class="posts-archive-grid" id="masterPostsGrid" style="grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.75rem; margin-bottom: 3rem;">
+
+          <!-- Card 1: What Happens When You Delete a File? The Hidden Mechanics of Inodes, SSD TRIM, and Ghost Data -->
+          <article class="post-card" data-filter="systems">
+            <a href="/posts/what-happens-when-you-delete-a-file.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/what-happens-when-you-delete-a-file/hero-1280.svg" alt="What Happens When You Delete a File? The Hidden Mechanics of Inodes, SSD TRIM, and Ghost Data" width="768" height="432" loading="eager" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Storage & Forensics
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Cybersecurity</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">19 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">3,870 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/what-happens-when-you-delete-a-file.html" style="color: var(--text-primary); transition: color 0.15s ease;">What Happens When You Delete a File? The Hidden Mechanics of Inodes, SSD TRIM, and Ghost Data</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                When you press delete, your computer does not erase a single byte. Explore OS syscalls, file system pointers, NAND flash physics, TRIM deallocation, and mobile photo recovery.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Why Some Websites Feel Instant While Others Take 5 Seconds to Open -->
+          <article class="post-card" data-filter="web-perf">
+            <a href="/posts/why-some-websites-feel-instant.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/why-some-websites-feel-instant/hero-1280.svg" alt="Why Some Websites Feel Instant While Others Take 5 Seconds to Open" width="768" height="432" loading="eager" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Web Performance
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Web Development</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">21 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,549 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/why-some-websites-feel-instant.html" style="color: var(--text-primary); transition: color 0.15s ease;">Why Some Websites Feel Instant While Others Take 5 Seconds to Open</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                Sub-second web performance is not an accident. Dive into DNS resolution, TCP/TLS handshakes, TTFB bottlenecks, CSSOM blocking, and our side-by-side live benchmark audit.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: The Browser Tab You Closed Is Not Always Gone -->
+          <article class="post-card" data-filter="systems">
+            <a href="/posts/how-browser-tabs-use-memory.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/how-browser-tabs-use-memory/hero-1280.svg" alt="The Browser Tab You Closed Is Not Always Gone: How Modern Browsers Actually Use Memory" width="768" height="432" loading="eager" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Browser Internals
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Technology</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">20 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,728 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/how-browser-tabs-use-memory.html" style="color: var(--text-primary); transition: color 0.15s ease;">The Browser Tab You Closed Is Not Always Gone: How Modern Browsers Actually Use Memory</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                Why does closing twenty browser tabs barely lower your RAM? Discover Chrome’s multi-process model, Site Isolation, V8 heap generations, lazy garbage collection, and bfcache snapshots.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: What Really Happens When You Type a URL and Press Enter -->
+          <article class="post-card" data-filter="web-perf">
+            <a href="/posts/what-happens-when-you-type-a-url.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/what-happens-when-you-type-a-url/hero-1280.svg" alt="What Really Happens When You Type a URL and Press Enter: The Microsecond Odyssey" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Systems & Network
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Web Development</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">22 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,446 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/what-happens-when-you-type-a-url.html" style="color: var(--text-primary); transition: color 0.15s ease;">What Really Happens When You Type a URL and Press Enter: The Microsecond Odyssey</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                From mechanical key switch interrupts and recursive DNS Anycast queries to TLS 1.3 Diffie-Hellman handshakes, DOM construction, and GPU rasterization.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Why Your Phone Gets Slower Over Time -->
+          <article class="post-card" data-filter="systems">
+            <a href="/posts/why-phones-get-slower-over-time.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/why-phones-get-slower-over-time/hero-1280.svg" alt="Why Your Phone Gets Slower Over Time: The Truth About NAND Flash, SQLite, and Batteries" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Hardware & Silicon
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Technology</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">21 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,260 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/why-phones-get-slower-over-time.html" style="color: var(--text-primary); transition: color 0.15s ease;">Why Your Phone Gets Slower Over Time: The Truth About NAND Flash, SQLite, and Batteries</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                Is planned obsolescence real? Explore the real physical and software reasons phones slow down: NAND flash fill degradation, SQLite WAL database fragmentation, and battery throttling.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: The Invisible Data Websites Collect Before You Click 'Allow' -->
+          <article class="post-card" data-filter="privacy">
+            <a href="/posts/what-websites-collect-before-you-allow-cookies.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/what-websites-collect-before-you-allow-cookies/hero-1280.svg" alt="The Invisible Data Websites Collect Before You Click 'Allow': Cookie Banner Illusion" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Digital Forensics
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Cybersecurity</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">21 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,416 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/what-websites-collect-before-you-allow-cookies.html" style="color: var(--text-primary); transition: color 0.15s ease;">The Invisible Data Websites Collect Before You Click 'Allow': Cookie Banner Illusion</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                Think you are anonymous until you click accept on a cookie popup? Discover passive HTTP telemetry, TLS JA3/JA4 fingerprints, Canvas subpixel rasterization, and WebGL GPU unmasking.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7: Why a 10 MB Image Can Make a Website Feel Broken -->
+          <article class="post-card" data-filter="web-perf">
+            <a href="/posts/why-large-images-slow-websites.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/why-large-images-slow-websites/hero-1280.svg" alt="Why a 10 MB Image Can Make a Website Feel Broken: Codecs, DOM Blocking, and Memory" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Media Optimization
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Web Development</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">23 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,354 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/why-large-images-slow-websites.html" style="color: var(--text-primary); transition: color 0.15s ease;">Why a 10 MB Image Can Make a Website Feel Broken: Codecs, DOM Blocking, and Memory</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                A high-res camera photo uploaded directly to the web can paralyze mobile CPUs. Compare PNG vs JPEG vs WebP vs AVIF, human chroma subsampling physics, and VRAM memory decoding.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8: What Happens to Your Data When You Uninstall an App? Sandboxes, Push Tokens & Fingerprints -->
+          <article class="post-card" data-filter="privacy">
+            <a href="/posts/what-happens-to-data-after-uninstalling-an-app.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/what-happens-to-data-after-uninstalling-an-app/hero-1280.svg" alt="What Happens to Your Data When You Uninstall an App? Sandboxes, Push Tokens & Fingerprints" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Privacy Audit
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Cybersecurity</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">22 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,398 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/what-happens-to-data-after-uninstalling-an-app.html" style="color: var(--text-primary); transition: color 0.15s ease;">What Happens to Your Data When You Uninstall an App? Sandboxes, Push Tokens & Fingerprints</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                Deleting an app clears its local sandbox, but leaves behind advertising profile graphs, server-side retention databases, orphaned scoped storage files, and push notification tokens.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9: Why Two Wi-Fi Networks With the Same Speed Feel Completely Different -->
+          <article class="post-card" data-filter="web-perf">
+            <a href="/posts/why-same-wifi-speed-can-feel-different.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/why-same-wifi-speed-can-feel-different/hero-1280.svg" alt="Why Two Wi-Fi Networks With the Same Speed Feel Completely Different: Bufferbloat & Jitter" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Network Physics
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Technology</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">21 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,260 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/why-same-wifi-speed-can-feel-different.html" style="color: var(--text-primary); transition: color 0.15s ease;">Why Two Wi-Fi Networks With the Same Speed Feel Completely Different: Bufferbloat & Jitter</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                Both networks show 100 Mbps on Speedtest, yet one stutters on Zoom calls and drops game packets. Discover the physics of latency, jitter, bufferbloat FIFO queues, and RF interference.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 10: The Hidden Cost of 'Free' Online Tools -->
+          <article class="post-card" data-filter="privacy">
+            <a href="/posts/hidden-cost-of-free-online-tools.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/hidden-cost-of-free-online-tools/hero-1280.svg" alt="The Hidden Cost of 'Free' Online Tools: Where Your Files, Metadata, and Privacy Actually Go" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Cloud Economics
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">Cybersecurity</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">21 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">2,284 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/hidden-cost-of-free-online-tools.html" style="color: var(--text-primary); transition: color 0.15s ease;">The Hidden Cost of 'Free' Online Tools: Where Your Files, Metadata, and Privacy Actually Go</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                Free PDF converters and image compressors don't run on charity. Discover backend compute economics, document retention windows, EXIF metadata harvesting, and our 7-point audit checklist.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 11: ChatGPT Secret Codes -->
+          <article class="post-card" data-filter="ai-tools">
+            <a href="/posts/chatgpt-secret-codes.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/chatgpt-secret-codes/hero-1280.jpg" alt="ChatGPT Secret Codes: 25 Master Prompts & Power Operators for Flawless Responses" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Prompt Engineering
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">AI Tools</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">24 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">4,200 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/chatgpt-secret-codes.html" style="color: var(--text-primary); transition: color 0.15s ease;">ChatGPT Secret Codes: 25 Master Prompts & Power Operators for Flawless Responses</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                Tired of robotic AI clichés? Discover 25 battle-tested power prompts, cognitive reasoning frameworks, zero-shot role activations, and system parameter codes with 6 AI pioneer insights.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 12: Top 10 Free AI Tools in 2026 That Will Transform Your Workflow -->
+          <article class="post-card" data-filter="ai-tools">
+            <a href="/posts/top-10-free-ai-tools-2026.html" class="card-thumb-wrap" style="aspect-ratio: 16 / 9; overflow: hidden; background: #090d16; position: relative;">
+              <img src="/assets/images/posts/top-10-free-ai-tools-2026/hero-1280.jpg" alt="Top 10 Free AI Tools in 2026 That Will Transform Your Workflow" width="768" height="432" loading="lazy" style="transition: transform 0.3s ease; width: 100%; height: 100%; object-fit: cover;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+              <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(4px); color: #38bdf8; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3); font-family: var(--font-mono, monospace);">
+                Tools Benchmark
+              </span>
+            </a>
+            <div class="card-body" style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1;">
+              <div class="card-kicker-row" style="margin-bottom: 0.65rem;">
+                <span class="card-kicker-cat">AI Tools</span>
+                <span>&middot;</span>
+                <span class="card-read-pill">18 min read</span>
+                <span>&middot;</span>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #10b981; font-weight: 700;">3,150 words</span>
+              </div>
+              <h3 class="card-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 0.65rem;">
+                <a href="/posts/top-10-free-ai-tools-2026.html" style="color: var(--text-primary); transition: color 0.15s ease;">Top 10 Free AI Tools in 2026 That Will Transform Your Workflow</a>
+              </h3>
+              <p class="card-excerpt" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1;">
+                We stress-tested over 80 generative AI and coding assistants across local and cloud environments to highlight the top 10 truly free, production-grade tools for software engineers and creators.
+              </p>
+              <div class="card-footer" style="padding-top: 0.85rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                  <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad" width="28" height="28" style="border-radius: 9999px; background: #000; border: 1px solid var(--border-medium);" />
+                  <span class="card-author-name" style="font-size: 0.82rem; font-weight: 600;">Mohammad Ahad</span>
+                </div>
+                <time datetime="2026-10-12" style="font-size: 0.78rem; color: var(--text-muted);">Oct 12, 2026</time>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- In-Feed Ad Banner (728x90) with Zero-CLS reservation -->
+        <div class="ad-slot-wrapper ad-in-article" aria-label="In-Feed Sponsored Ad" style="margin: 2.5rem 0;">
+          <span class="ad-label">Advertisement</span>
+        </div>
+
+        <!-- Editorial Trust & E-E-A-T Guarantee -->
+        <div class="trust-guarantee-bar">
+          <div class="trust-item">
+            <span class="trust-item-icon">🔬</span>
+            <div>
+              <div class="trust-item-title">Original Lab Testing</div>
+              <div class="trust-item-desc">Hardware packet sniffs, V8 heap snapshots, and real SSD TRIM forensics.</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item-icon">👨‍🔬</span>
+            <div>
+              <div class="trust-item-title">72 Peer Authorities</div>
+              <div class="trust-item-desc">6 distinguished researchers and systems architects verified per guide.</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item-icon">🛡️</span>
+            <div>
+              <div class="trust-item-title">AdSense &amp; Privacy Safe</div>
+              <div class="trust-item-desc">Zero cloaking, zero deceptive links, fully compliant with publisher policies.</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item-icon">📝</span>
+            <div>
+              <div class="trust-item-title">Editorial Fact-Check</div>
+              <div class="trust-item-desc">Every line of code and benchmark reviewed according to our editorial standards.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Sidebar (Author, Trending, Topics, Ads) -->
+      <aside class="home-sidebar" aria-label="Sidebar">
+        <!-- Sidebar Widget 1: Instant Search -->
+        <div class="sidebar-widget-card">
+          <h3 class="sidebar-widget-title">Search Ahadex Blog</h3>
+          <div style="position: relative;">
+            <input 
+              type="search" 
+              placeholder="Search SSDs, Latency, V8, AI..." 
+              onclick="document.getElementById('searchTriggerBtn') && document.getElementById('searchTriggerBtn').click()"
+              style="width: 100%; padding: 0.65rem 0.85rem 0.65rem 2.25rem; font-size: 0.85rem; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-primary); cursor: pointer;"
+              readonly
+            />
+            <svg style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <span style="display: block; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.4rem;">Press Ctrl+K anytime for live index search</span>
+        </div>
+
+        <!-- Sidebar Widget 2: Founder Card (Mohammad Ahad) -->
+        <div class="sidebar-widget-card" style="text-align: center; border-top: 3px solid var(--brand-primary);">
+          <img src="/assets/images/ahadex-logo.svg" alt="Mohammad Ahad - Ahadex Blog Founder" width="76" height="76" style="border-radius: 9999px; margin: 0 auto 0.75rem; border: 2px solid var(--border-medium); background: #000; padding: 2px;" />
+          <h4 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 0.2rem; color: var(--text-primary);">Mohammad Ahad</h4>
+          <p style="font-size: 0.78rem; color: var(--brand-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.65rem;">Founder &amp; Chief Systems Editor</p>
+          <p style="font-size: 0.83rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 1.15rem;">
+            Investigating operating system kernels, solid-state storage mechanics, sub-second web performance, and generative AI architectures.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="https://wa.me/971507975837" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; width: 100%; padding: 0.6rem; background: #25d366; color: #fff; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 700; text-decoration: none;">
+              <span>WhatsApp: +971 50 797 5837</span>
+            </a>
+            <a href="mailto:mdahadvi91@gmail.com" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; width: 100%; padding: 0.5rem; background: var(--bg-tertiary); color: var(--text-primary); border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border-medium);">
+              <span>Email: mdahadvi91@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar Widget 3: Popular & Trending Investigations -->
+        <div class="sidebar-widget-card">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <h3 class="sidebar-widget-title" style="margin: 0;">Trending Deep-Dives</h3>
+            <span style="font-size: 0.72rem; color: #10b981; font-weight: 700;">★ TOP 4</span>
+          </div>
+          <ul class="sidebar-post-list">
+            <li class="sidebar-post-item">
+              <a href="/posts/what-happens-when-you-delete-a-file.html" class="sidebar-post-link">
+                What Happens When You Delete a File? Inodes, SSD TRIM &amp; Ghost Data
+              </a>
+              <span class="sidebar-post-meta">Cybersecurity &middot; 3,870 words &middot; 6 Authorities</span>
+            </li>
+            <li class="sidebar-post-item">
+              <a href="/posts/why-some-websites-feel-instant.html" class="sidebar-post-link">
+                Why Some Websites Feel Instant While Others Take 5 Seconds to Open
+              </a>
+              <span class="sidebar-post-meta">Web Dev &middot; 2,549 words &middot; 80ms Waterfall</span>
+            </li>
+            <li class="sidebar-post-item">
+              <a href="/posts/how-browser-tabs-use-memory.html" class="sidebar-post-link">
+                The Browser Tab You Closed Is Not Always Gone: Chrome RAM Internals
+              </a>
+              <span class="sidebar-post-meta">Technology &middot; 2,728 words &middot; V8 Heap &amp; bfcache</span>
+            </li>
+            <li class="sidebar-post-item">
+              <a href="/posts/chatgpt-secret-codes.html" class="sidebar-post-link">
+                ChatGPT Secret Codes: 25 Master Prompts &amp; Power Operators
+              </a>
+              <span class="sidebar-post-meta">AI Tools &middot; 4,200 words &middot; 6 AI Pioneers</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sidebar Widget 4: Google AdSense Slot (300x250 Medium Rectangle with Zero-CLS) -->
+        <div class="ad-slot-wrapper ad-inline-rectangle" aria-label="Sidebar Advertisement">
+          <span class="ad-label">Advertisement</span>
+        </div>
+
+        <!-- Sidebar Widget 5: Research Topics Taxonomy -->
+        <div class="sidebar-widget-card">
+          <h3 class="sidebar-widget-title">Engineering Topics</h3>
+          <ul class="sidebar-category-list">
+            <li class="sidebar-category-item">
+              <a href="/categories/cybersecurity.html">Storage Forensics &amp; Privacy</a>
+              <span class="category-count-badge">4</span>
+            </li>
+            <li class="sidebar-category-item">
+              <a href="/categories/web-development.html">Web Performance &amp; Network</a>
+              <span class="category-count-badge">4</span>
+            </li>
+            <li class="sidebar-category-item">
+              <a href="/categories/technology.html">Hardware, Memory &amp; Silicon</a>
+              <span class="category-count-badge">2</span>
+            </li>
+            <li class="sidebar-category-item">
+              <a href="/categories/ai-tools.html">Generative AI &amp; Transformers</a>
+              <span class="category-count-badge">2</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sidebar Widget 6: Trust Policy Badge -->
+        <div class="sidebar-widget-card" style="background: rgba(2, 132, 199, 0.05); border-color: rgba(2, 132, 199, 0.2);">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="color: var(--brand-primary); font-size: 1.1rem;">🛡️</span>
+            <span style="font-weight: 700; font-size: 0.88rem; color: var(--text-primary);">Editorial Standards</span>
+          </div>
+          <p style="font-size: 0.78rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            Ahadex Blog adheres to strict fact-checking, benchmark transparency, and peer citation guidelines to deliver authentic, human-tested technical journalism.
+          </p>
+          <a href="/editorial-policy.html" style="font-size: 0.78rem; font-weight: 700; color: var(--brand-primary); text-decoration: underline;">Read Editorial Policy &rarr;</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Newsletter Component -->
+    <div data-component="newsletter"></div>
+  </main>
+
+  <!-- Footer Component Container -->
+  <div data-component="footer"></div>
+
+  <!-- Client-side Interactive Filter Script -->
+  <script>
+    function filterArticles(category, btn) {
+      // Update active pill styling
+      const pills = document.querySelectorAll('.filter-pill');
+      pills.forEach(p => p.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      // Filter post cards
+      const cards = document.querySelectorAll('#masterPostsGrid .post-card');
+      cards.forEach(card => {
+        const filterGroup = card.getAttribute('data-filter');
+        if (category === 'all' || filterGroup === category) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="/js/main.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/ads.js" defer></script>
+</body>
+</html>

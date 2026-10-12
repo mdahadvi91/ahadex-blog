@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Carbon / Checker pattern matching user's logo -->
+    <pattern id="carbon-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#18181b"/>
+      <rect width="10" height="10" fill="#27272a"/>
+      <rect x="10" y="10" width="10" height="10" fill="#27272a"/>
+    </pattern>
+    <clipPath id="circle-clip">
+      <circle cx="250" cy="250" r="235" />
+    </clipPath>
+  </defs>
+
+  <!-- Circular Base with clip -->
+  <g clip-path="url(#circle-clip)">
+    <!-- Dark checkered background -->
+    <rect width="500" height="500" fill="url(#carbon-grid)" />
+    
+    <!-- Outer vignette / subtle rim -->
+    <circle cx="250" cy="250" r="235" fill="none" stroke="#3f3f46" stroke-width="6" />
+
+    <!-- Stylized Modern Bold 'A' Geometry matching Ahadex logo -->
+    <!-- Left Stem & Apex -->
+    <path d="M 250,22 L 350,188 L 298,228 L 250,140 L 138,325 L 260,285 L 280,355 L 95,415 L 42,385 Z" fill="#ffffff" />
+    
+    <!-- Center-Right Crossbar / Blade -->
+    <path d="M 260,195 L 355,270 L 175,445 L 120,445 Z" fill="#ffffff" />
+    
+    <!-- Right Parallel Wing/Stroke -->
+    <path d="M 360,200 L 458,368 L 385,448 L 290,295 Z" fill="#ffffff" />
+    
+    <!-- 4-Pointed Sparkle / Star in the center apex -->
+    <path d="M 250,190 Q 250,225 220,225 Q 250,225 250,260 Q 250,225 280,225 Q 250,225 250,190 Z" fill="#ffffff" />
+  </g>
+
+  <!-- Outer circle ring -->
+  <circle cx="250" cy="250" r="235" fill="none" stroke="#ffffff" stroke-width="8" stroke-opacity="0.9" />
+</svg>

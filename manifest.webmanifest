@@ -1,0 +1,22 @@
+{
+  "name": "Ahadex - Modern Tech & AI Intelligence",
+  "short_name": "Ahadex",
+  "description": "Independent technology journalism, in-depth AI tool comparisons, and engineering tutorials founded by Mohammad Ahad.",
+  "start_url": "https://ahadex.online/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/assets/images/ahadex-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

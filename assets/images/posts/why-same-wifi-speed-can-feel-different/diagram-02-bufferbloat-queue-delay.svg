@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bg-grad-2183" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+    <pattern id="grid-pat-2183" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+  
+  <!-- Canvas Background -->
+  <rect width="900" height="480" fill="url(#bg-grad-2183)" />
+  <rect width="900" height="480" fill="url(#grid-pat-2183)" />
+
+  <!-- Outer Border Frame -->
+  <rect x="20" y="20" width="860" height="440" rx="12" fill="none" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Top Accent Bar -->
+  <rect x="20" y="20" width="860" height="42" rx="12" fill="#0f172a" />
+  <rect x="20" y="60" width="860" height="2" fill="#1e293b" />
+  
+  <!-- Window Controls -->
+  <circle cx="44" cy="41" r="5" fill="#ef4444" />
+  <circle cx="60" cy="41" r="5" fill="#f59e0b" />
+  <circle cx="76" cy="41" r="5" fill="#10b981" />
+
+  <!-- Category Kicker -->
+  <rect x="105" y="31" width="160" height="20" rx="10" fill="rgba(2, 132, 199, 0.12)" stroke="#10b981" stroke-width="0.8"/>
+  <text x="185" y="45" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#10b981" text-anchor="middle" letter-spacing="1">QUEUE DYNAMICS</text>
+  <text x="850" y="45" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748b" text-anchor="end">AHADEX SPEC LABS</text>
+
+  <!-- Title & Description -->
+  <text x="50" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="-0.3">Bufferbloat: How Deep FIFO Queues Destroy Real-Time Traffic</text>
+  <text x="50" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="400" fill="#94a3b8">Large unmanaged router buffers delay real-time audio and game packets during background upload downloads.</text>
+
+  <!-- Flow Grid Nodes -->
+  
+    <g transform="translate(50, 180)">
+      <rect x="0" y="0" width="250" height="70" rx="8" fill="#131b2e" stroke="#1e293b" stroke-width="1.2" />
+      <circle cx="22" cy="22" r="12" fill="#10b981" opacity="0.15" />
+      <text x="22" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#10b981" text-anchor="middle">1</text>
+      <text x="44" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">Phase 1</text>
+      <text x="14" y="50" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#94a3b8">Host starts bulk file upload</text>
+    </g>
+  
+    <g transform="translate(320, 180)">
+      <rect x="0" y="0" width="250" height="70" rx="8" fill="#131b2e" stroke="#1e293b" stroke-width="1.2" />
+      <circle cx="22" cy="22" r="12" fill="#10b981" opacity="0.15" />
+      <text x="22" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#10b981" text-anchor="middle">2</text>
+      <text x="44" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">Phase 2</text>
+      <text x="14" y="50" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#94a3b8">Router FIFO buffer fills completely</text>
+    </g>
+  
+    <g transform="translate(590, 180)">
+      <rect x="0" y="0" width="250" height="70" rx="8" fill="#131b2e" stroke="#1e293b" stroke-width="1.2" />
+      <circle cx="22" cy="22" r="12" fill="#10b981" opacity="0.15" />
+      <text x="22" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#10b981" text-anchor="middle">3</text>
+      <text x="44" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">Phase 3</text>
+      <text x="14" y="50" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#94a3b8">Queue delay spikes from 15ms to 600ms</text>
+    </g>
+  
+    <g transform="translate(50, 265)">
+      <rect x="0" y="0" width="250" height="70" rx="8" fill="#131b2e" stroke="#1e293b" stroke-width="1.2" />
+      <circle cx="22" cy="22" r="12" fill="#10b981" opacity="0.15" />
+      <text x="22" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#10b981" text-anchor="middle">4</text>
+      <text x="44" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">Phase 4</text>
+      <text x="14" y="50" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#94a3b8">VoIP packets trapped behind bulk TCP chunks</text>
+    </g>
+  
+    <g transform="translate(320, 265)">
+      <rect x="0" y="0" width="250" height="70" rx="8" fill="#131b2e" stroke="#1e293b" stroke-width="1.2" />
+      <circle cx="22" cy="22" r="12" fill="#10b981" opacity="0.15" />
+      <text x="22" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#10b981" text-anchor="middle">5</text>
+      <text x="44" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">Phase 5</text>
+      <text x="14" y="50" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#94a3b8">Video call stutters, games disconnect</text>
+    </g>
+  
+
+  <!-- Footer Verification Badge -->
+  <g transform="translate(50, 400)">
+    <rect x="0" y="0" width="800" height="38" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <circle cx="20" cy="19" r="6" fill="#10b981" />
+    <text x="36" y="23" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">Hardware Architecture &amp; Protocol Specification &middot; Peer Verified &middot; Ahadex Research</text>
+    <text x="785" y="23" font-family="'JetBrains Mono', monospace" font-size="10" fill="#10b981" text-anchor="end">FIGURE VERIFIED</text>
+  </g>
+</svg>

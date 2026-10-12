@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instant Search &mdash; Ahadex Blog</title>
+  <meta name="description" content="Instant client-side search across all Ahadex Blog technical articles, benchmarks, and tutorials." />
+  <link rel="canonical" href="https://ahadex.online/search/index.html" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/search.css" />
+  <link rel="stylesheet" href="/css/category.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+</head>
+<body>
+  <div data-component="header"></div>
+  <div data-component="search"></div>
+
+  <main class="container" style="padding-top: 2.5rem; max-width: 860px;">
+    <div style="margin-bottom: 2rem;">
+      <span class="archive-pretitle">Instant Technical Index</span>
+      <h1 class="archive-main-title" style="margin-bottom: 0.5rem;">Search TechJournal</h1>
+      <p style="color: var(--text-secondary); font-size: 0.95rem;">
+        Query our pre-indexed benchmark library for AI tools, JavaScript runtime performance, zero-trust cybersecurity, and engineering workflows.
+      </p>
+    </div>
+
+    <!-- Search Input Field -->
+    <div style="position: relative; margin-bottom: 2rem;">
+      <input 
+        type="search" 
+        id="pageSearchInput" 
+        placeholder="Type keyword, model name, or topic (e.g. AI Tools, Ollama, JavaScript, DeepSeek)..." 
+        style="width: 100%; padding: 0.85rem 1.25rem 0.85rem 3rem; font-size: 1.05rem; border: 2px solid var(--border-medium); border-radius: var(--radius-md); background: var(--bg-secondary); color: var(--text-primary); outline: none;"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <svg style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted);" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-muted); border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+      <span id="pageResultsCount">Loading technical index...</span>
+      <span>Instant Client-Side Filtering</span>
+    </div>
+
+    <!-- Results Container -->
+    <div id="pageSearchResults" class="search-results-list" style="gap: 1rem; margin-bottom: 4rem;">
+      <div class="search-empty-state">Loading articles...</div>
+    </div>
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="/js/main.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/ads.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+[
+  {
+    "id": "what-happens-when-you-delete-a-file",
+    "title": "What Happens When You Delete a File? The Hidden Mechanics of Inodes, SSD TRIM, and Ghost Data",
+    "slug": "what-happens-when-you-delete-a-file",
+    "url": "/posts/what-happens-when-you-delete-a-file.html",
+    "excerpt": "When you press delete, your computer does not erase a single byte. Explore OS syscalls, file system pointers, NAND flash physics, TRIM deallocation, and mobile photo recovery.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Cybersecurity",
+    "categorySlug": "cybersecurity",
+    "categoryUrl": "/categories/cybersecurity.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "19 min read",
+    "featured": true,
+    "tags": [
+      "Cybersecurity",
+      "Filesystems",
+      "SSD TRIM",
+      "Hardware",
+      "Operating Systems"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/what-happens-when-you-delete-a-file/hero-1280.svg",
+      "alt": "What Happens When You Delete a File - Inode and TRIM Architecture"
+    }
+  },
+  {
+    "id": "why-some-websites-feel-instant",
+    "title": "Why Some Websites Feel Instant While Others Take 5 Seconds to Open",
+    "slug": "why-some-websites-feel-instant",
+    "url": "/posts/why-some-websites-feel-instant.html",
+    "excerpt": "Sub-second web performance is not an accident. Dive into DNS resolution, TCP/TLS handshakes, TTFB bottlenecks, CSSOM blocking, and our side-by-side live benchmark audit.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Web Development",
+    "categorySlug": "web-development",
+    "categoryUrl": "/categories/web-development.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "21 min read",
+    "featured": true,
+    "tags": [
+      "Web Development",
+      "Performance",
+      "Core Web Vitals",
+      "JavaScript",
+      "Networking"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/why-some-websites-feel-instant/hero-1280.svg",
+      "alt": "Web Performance Latency Breakdown - DNS, TCP, and TTFB Waterfall"
+    }
+  },
+  {
+    "id": "how-browser-tabs-use-memory",
+    "title": "The Browser Tab You Closed Is Not Always Gone: How Modern Browsers Actually Use Memory",
+    "slug": "how-browser-tabs-use-memory",
+    "url": "/posts/how-browser-tabs-use-memory.html",
+    "excerpt": "Why does closing twenty browser tabs barely lower your RAM? Discover Chrome’s multi-process model, Site Isolation, V8 heap generations, lazy garbage collection, and bfcache snapshots.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Technology",
+    "categorySlug": "technology",
+    "categoryUrl": "/categories/technology.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "20 min read",
+    "featured": false,
+    "tags": [
+      "Technology",
+      "Browsers",
+      "RAM",
+      "Chrome",
+      "V8 Engine"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/how-browser-tabs-use-memory/hero-1280.svg",
+      "alt": "Browser Multi-Process Architecture and V8 Memory Allocation"
+    }
+  },
+  {
+    "id": "what-happens-when-you-type-a-url",
+    "title": "What Really Happens When You Type a URL and Press Enter: The Microsecond Odyssey",
+    "slug": "what-happens-when-you-type-a-url",
+    "url": "/posts/what-happens-when-you-type-a-url.html",
+    "excerpt": "From mechanical key switch interrupts and recursive DNS Anycast queries to TLS 1.3 Diffie-Hellman handshakes, DOM construction, and GPU rasterization &mdash; the complete engineering journey.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Web Development",
+    "categorySlug": "web-development",
+    "categoryUrl": "/categories/web-development.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "22 min read",
+    "featured": false,
+    "tags": [
+      "Web Development",
+      "Networking",
+      "DNS",
+      "TCP",
+      "TLS",
+      "Browser Internals"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/what-happens-when-you-type-a-url/hero-1280.svg",
+      "alt": "End-to-End URL Request Lifecycle - From Keystroke to Composited Pixels"
+    }
+  },
+  {
+    "id": "why-phones-get-slower-over-time",
+    "title": "Why Your Phone Gets Slower Over Time: The Truth About NAND Flash, SQLite, and Batteries",
+    "slug": "why-phones-get-slower-over-time",
+    "url": "/posts/why-phones-get-slower-over-time.html",
+    "excerpt": "Is planned obsolescence real? Explore the real physical and software reasons phones slow down: NAND flash fill degradation, SQLite WAL database fragmentation, and battery throttling.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Technology",
+    "categorySlug": "technology",
+    "categoryUrl": "/categories/technology.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "21 min read",
+    "featured": false,
+    "tags": [
+      "Technology",
+      "Smartphones",
+      "Hardware",
+      "Batteries",
+      "NAND Flash",
+      "Android"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/why-phones-get-slower-over-time/hero-1280.svg",
+      "alt": "Smartphone Hardware Architecture - NAND Flash WAF and Battery Throttling"
+    }
+  },
+  {
+    "id": "what-websites-collect-before-you-allow-cookies",
+    "title": "The Invisible Data Websites Collect Before You Click 'Allow': Cookie Banner Illusion",
+    "slug": "what-websites-collect-before-you-allow-cookies",
+    "url": "/posts/what-websites-collect-before-you-allow-cookies.html",
+    "excerpt": "Think you are anonymous until you click accept on a cookie popup? Discover passive HTTP telemetry, TLS JA3/JA4 fingerprints, Canvas subpixel rasterization, and WebGL GPU unmasking.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Cybersecurity",
+    "categorySlug": "cybersecurity",
+    "categoryUrl": "/categories/cybersecurity.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "21 min read",
+    "featured": false,
+    "tags": [
+      "Cybersecurity",
+      "Privacy",
+      "Fingerprinting",
+      "Cookies",
+      "Web Standards"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/what-websites-collect-before-you-allow-cookies/hero-1280.svg",
+      "alt": "Browser Fingerprinting Matrix - Canvas, WebGL, and TLS JA3 Telemetry"
+    }
+  },
+  {
+    "id": "why-large-images-slow-websites",
+    "title": "Why a 10 MB Image Can Make a Website Feel Broken: Decoding Modern Web Formats",
+    "slug": "why-large-images-slow-websites",
+    "url": "/posts/why-large-images-slow-websites.html",
+    "excerpt": "Shipping raw high-res photos destroys web performance. Compare PNG, JPEG, WebP, and AVIF, discover why a 10MB JPEG expands to 100MB of mobile RAM, and implement zero-CLS responsive pictures.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Web Development",
+    "categorySlug": "web-development",
+    "categoryUrl": "/categories/web-development.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "20 min read",
+    "featured": false,
+    "tags": [
+      "Web Development",
+      "Images",
+      "AVIF",
+      "WebP",
+      "Performance",
+      "Core Web Vitals"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/why-large-images-slow-websites/hero-1280.svg",
+      "alt": "Image Codec Benchmark - AVIF, WebP, JPEG, and Mobile RAM Footprint"
+    }
+  },
+  {
+    "id": "what-happens-to-data-after-uninstalling-an-app",
+    "title": "What Happens to Your Data When You Uninstall an App? The Ghost Trails",
+    "slug": "what-happens-to-data-after-uninstalling-an-app",
+    "url": "/posts/what-happens-to-data-after-uninstalling-an-app.html",
+    "excerpt": "Think deleting an app erases your history? Discover what actually happens to sandbox directories, iOS Keychain tokens, Android external storage, cloud backups, and advertising IDs.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Cybersecurity",
+    "categorySlug": "cybersecurity",
+    "categoryUrl": "/categories/cybersecurity.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "21 min read",
+    "featured": false,
+    "tags": [
+      "Cybersecurity",
+      "Mobile Privacy",
+      "iOS",
+      "Android",
+      "Data Protection"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/what-happens-to-data-after-uninstalling-an-app/hero-1280.svg",
+      "alt": "App Sandbox Deletion vs Persistent Keychains and Remote Databases"
+    }
+  },
+  {
+    "id": "why-same-wifi-speed-can-feel-different",
+    "title": "Why Two Wi-Fi Networks With the Same Speed Feel Completely Different",
+    "slug": "why-same-wifi-speed-can-feel-different",
+    "url": "/posts/why-same-wifi-speed-can-feel-different.html",
+    "excerpt": "Both show 100 Mbps on a speed test, but one feels instant while the other stutters on Zoom and lags in gaming. Discover why bandwidth is not speed: latency, packet jitter, and Bufferbloat.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Technology",
+    "categorySlug": "technology",
+    "categoryUrl": "/categories/technology.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "21 min read",
+    "featured": false,
+    "tags": [
+      "Technology",
+      "Networking",
+      "Wi-Fi",
+      "Bufferbloat",
+      "Latency",
+      "Gaming"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/why-same-wifi-speed-can-feel-different/hero-1280.svg",
+      "alt": "Network Telemetry - 100 Mbps Low Latency vs High Jitter Bufferbloat"
+    }
+  },
+  {
+    "id": "hidden-cost-of-free-online-tools",
+    "title": "The Hidden Cost of 'Free' Online Tools: Where Your Files and Metadata Go",
+    "slug": "hidden-cost-of-free-online-tools",
+    "url": "/posts/hidden-cost-of-free-online-tools.html",
+    "excerpt": "Nothing in cloud computing is free. Uncover hidden privacy risks of free PDF converters and online tools: server retention windows, EXIF metadata harvesting, and WebAssembly alternatives.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "Cybersecurity",
+    "categorySlug": "cybersecurity",
+    "categoryUrl": "/categories/cybersecurity.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "21 min read",
+    "featured": false,
+    "tags": [
+      "Cybersecurity",
+      "Privacy",
+      "WebAssembly",
+      "Online Tools",
+      "Metadata"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/hidden-cost-of-free-online-tools/hero-1280.svg",
+      "alt": "Cloud Server Security vs Local WebAssembly Browser Privacy Architecture"
+    }
+  },
+  {
+    "id": "chatgpt-secret-codes",
+    "title": "ChatGPT Secret Codes: 25 Master Prompts & Power Operators Tested (2026 Lab Manual)",
+    "slug": "chatgpt-secret-codes",
+    "url": "/posts/chatgpt-secret-codes.html",
+    "excerpt": "Unlock the 25 hidden ChatGPT secret codes, cognitive reasoning operators, and persona overrides tested in our lab. Learn what each code does, when to use it, and how to get human-grade AI responses.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "AI Tools",
+    "categorySlug": "ai-tools",
+    "categoryUrl": "/categories/ai-tools.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "18 min read",
+    "featured": true,
+    "tags": [
+      "AI",
+      "ChatGPT",
+      "Productivity",
+      "Prompt Engineering"
+    ],
+    "heroImage": {
+      "avif480": "/assets/images/posts/chatgpt-secret-codes/hero-480.jpg",
+      "avif768": "/assets/images/posts/chatgpt-secret-codes/hero-768.jpg",
+      "avif1280": "/assets/images/posts/chatgpt-secret-codes/hero-1280.jpg",
+      "fallback": "/assets/images/posts/chatgpt-secret-codes/hero-1280.jpg",
+      "alt": "ChatGPT Secret Codes and Prompt Engineering Terminal Setup"
+    }
+  },
+  {
+    "id": "top-10-free-ai-tools-2026",
+    "title": "Top 10 Free AI Tools in 2026 You Should Start Using Today",
+    "slug": "top-10-free-ai-tools-2026",
+    "url": "/posts/top-10-free-ai-tools-2026.html",
+    "excerpt": "We spent over 220 hours field-testing the top 10 truly free AI tools in 2026 for writers, programmers, creators, and researchers. In-depth benchmarks, free limits, and pro prompt tips.",
+    "date": "2026-10-12",
+    "formattedDate": "October 12, 2026",
+    "category": "AI Tools",
+    "categorySlug": "ai-tools",
+    "categoryUrl": "/categories/ai-tools.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "16 min read",
+    "featured": true,
+    "tags": [
+      "AI",
+      "ChatGPT",
+      "Productivity"
+    ],
+    "heroImage": {
+      "avif480": "/assets/images/posts/top-10-free-ai-tools-2026/hero-480.avif",
+      "avif768": "/assets/images/posts/top-10-free-ai-tools-2026/hero-768.avif",
+      "avif1280": "/assets/images/posts/top-10-free-ai-tools-2026/hero-1280.avif",
+      "fallback": "/assets/images/posts/top-10-free-ai-tools-2026/hero-1280.jpg",
+      "alt": "Top 10 Free AI Tools 2026 - Ahadex Benchmarks"
+    }
+  },
+  {
+    "id": "javascript-performance-optimization-2026",
+    "title": "Zero-Cost JavaScript Performance Optimization: From Bundle Splitting to Memory Profiling",
+    "slug": "javascript-performance-optimization-2026",
+    "url": "/posts/top-10-free-ai-tools-2026.html",
+    "excerpt": "Deep dive into sub-second Interaction to Next Paint (INP) latency, V8 bytecode caching, and tree-shaking architectures for modern SPAs.",
+    "date": "2026-10-10",
+    "formattedDate": "October 10, 2026",
+    "category": "Web Development",
+    "categorySlug": "web-development",
+    "categoryUrl": "/categories/web-development.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "6 min read",
+    "featured": false,
+    "tags": [
+      "JavaScript",
+      "Web Development",
+      "Productivity"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/top-10-free-ai-tools-2026/image-01-1280.jpg",
+      "alt": "Modern Code Editor JavaScript Performance Debugging"
+    }
+  },
+  {
+    "id": "cybersecurity-zero-trust-guide",
+    "title": "Implementing Zero-Trust Architecture in Microservices: The 2026 Field Manual",
+    "slug": "cybersecurity-zero-trust-guide",
+    "url": "/posts/top-10-free-ai-tools-2026.html",
+    "excerpt": "How modern engineering teams enforce cryptographic mutual TLS, ephemeral service tokens, and least-privilege telemetry across multi-cloud clusters.",
+    "date": "2026-10-08",
+    "formattedDate": "October 8, 2026",
+    "category": "Cybersecurity",
+    "categorySlug": "cybersecurity",
+    "categoryUrl": "/categories/cybersecurity.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "7 min read",
+    "featured": false,
+    "tags": [
+      "Cybersecurity",
+      "Technology"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/top-10-free-ai-tools-2026/hero-768.jpg",
+      "alt": "Secure Cryptographic Microservices Console"
+    }
+  },
+  {
+    "id": "deepseek-vs-claude-vs-gpt-benchmark",
+    "title": "Open-Weights vs Proprietary LLMs: Comprehensive Benchmark Comparison",
+    "slug": "deepseek-vs-claude-vs-gpt-benchmark",
+    "url": "/posts/top-10-free-ai-tools-2026.html",
+    "excerpt": "Comparing inference latency, reasoning tokens, token economics, and code synthesis accuracy across leading frontier models.",
+    "date": "2026-10-05",
+    "formattedDate": "October 5, 2026",
+    "category": "AI Tools",
+    "categorySlug": "ai-tools",
+    "categoryUrl": "/categories/ai-tools.html",
+    "author": "Mohammad Ahad",
+    "authorSlug": "author-name",
+    "authorUrl": "/authors/author-name.html",
+    "authorAvatar": "/assets/images/ahadex-logo.svg",
+    "readTime": "9 min read",
+    "featured": false,
+    "tags": [
+      "AI",
+      "ChatGPT",
+      "Technology"
+    ],
+    "heroImage": {
+      "fallback": "/assets/images/posts/top-10-free-ai-tools-2026/image-01-768.jpg",
+      "alt": "Neural Network Benchmark Dashboard"
+    }
+  }
+]

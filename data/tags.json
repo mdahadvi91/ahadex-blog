@@ -1,0 +1,9 @@
+[
+  { "name": "AI", "slug": "ai", "url": "/tags/ai.html", "count": 28 },
+  { "name": "ChatGPT", "slug": "chatgpt", "url": "/tags/chatgpt.html", "count": 16 },
+  { "name": "JavaScript", "slug": "javascript", "url": "/tags/javascript.html", "count": 22 },
+  { "name": "Productivity", "slug": "productivity", "url": "/tags/productivity.html", "count": 14 },
+  { "name": "Cybersecurity", "slug": "cybersecurity", "url": "/tags/cybersecurity.html", "count": 9 },
+  { "name": "Python", "slug": "python", "url": "/tags/python.html", "count": 12 },
+  { "name": "Open Source", "slug": "open-source", "url": "/tags/open-source.html", "count": 18 }
+]

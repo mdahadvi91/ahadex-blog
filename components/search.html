@@ -1,0 +1,43 @@
+<!-- Search Overlay Modal Component -->
+<div class="search-modal-backdrop" id="searchModal" aria-hidden="true">
+  <div class="search-modal-container" role="dialog" aria-modal="true" aria-label="Search articles">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input 
+        type="search" 
+        id="modalSearchInput" 
+        class="modal-search-input" 
+        placeholder="Type to search articles, tools, tutorials (e.g. AI tools, ChatGPT, JavaScript)..." 
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button class="search-modal-close" id="searchModalClose" aria-label="Close search">
+        <kbd>ESC</kbd>
+      </button>
+    </div>
+
+    <div class="search-modal-body">
+      <div class="search-quick-tags">
+        <span class="quick-tag-label">Popular Topics:</span>
+        <button class="quick-tag-btn" data-query="AI">AI Tools</button>
+        <button class="quick-tag-btn" data-query="ChatGPT">ChatGPT</button>
+        <button class="quick-tag-btn" data-query="JavaScript">JavaScript</button>
+        <button class="quick-tag-btn" data-query="Security">Cybersecurity</button>
+      </div>
+
+      <div class="search-results-list" id="modalSearchResults" aria-live="polite">
+        <div class="search-empty-state">
+          Type above to search articles instantly across TechJournal index...
+        </div>
+      </div>
+    </div>
+
+    <div class="search-modal-footer">
+      <span>Use <kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate, <kbd>ENTER</kbd> to select, <kbd>ESC</kbd> to dismiss</span>
+      <a href="/search/index.html" class="search-full-page-link">Advanced Search Page &rarr;</a>
+    </div>
+  </div>
+</div>

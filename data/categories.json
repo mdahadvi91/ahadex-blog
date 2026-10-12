@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ai-tools",
+    "name": "AI Tools",
+    "slug": "ai-tools",
+    "url": "/categories/ai-tools.html",
+    "description": "Comprehensive evaluations, benchmark tests, and hands-on reviews of generative AI, LLM apps, and automation software.",
+    "count": 14
+  },
+  {
+    "id": "web-development",
+    "name": "Web Development",
+    "slug": "web-development",
+    "url": "/categories/web-development.html",
+    "description": "Frontend, backend, modern frameworks, TypeScript, performance optimizations, and cloud deployment guides.",
+    "count": 19
+  },
+  {
+    "id": "productivity",
+    "name": "Productivity",
+    "slug": "productivity",
+    "url": "/categories/productivity.html",
+    "description": "Workflows, software stacks, keyboard ergonomics, and cognitive focus techniques for engineers and knowledge workers.",
+    "count": 11
+  },
+  {
+    "id": "cybersecurity",
+    "name": "Cybersecurity",
+    "slug": "cybersecurity",
+    "url": "/categories/cybersecurity.html",
+    "description": "Threat intelligence, data privacy architectures, zero-trust authentication, and secure coding practices.",
+    "count": 8
+  },
+  {
+    "id": "technology",
+    "name": "Technology",
+    "slug": "technology",
+    "url": "/categories/technology.html",
+    "description": "Emerging hardware, silicon roadmaps, open-source ecosystems, and the broader societal impacts of computation.",
+    "count": 23
+  }
+]

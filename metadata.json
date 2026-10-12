@@ -1,0 +1,6 @@
+{
+  "name": "Ahadex Blog",
+  "description": "Ahadex Blog — Engineering-grade tech investigations, systems architecture, web performance, digital privacy, and AI analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
